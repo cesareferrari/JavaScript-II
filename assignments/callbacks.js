@@ -37,18 +37,39 @@ getLength(items, function(length) {
 
 
 
-
 function last(arr, cb) {
   // last passes the last item of the array into the callback.
+  return cb(arr[arr.length - 1]);
 }
+
+last(items, function(last) {
+  console.log('The last item of the array is:', last);
+})
+
+
+
 
 function sumNums(x, y, cb) {
   // sumNums adds two numbers (x, y) and passes the result to the callback.
+  result = x + y
+  return cb(result)
 }
+
+sumNums(3, 5, (result) => { console.log('The result is:', result)});
+
+
+
 
 function multiplyNums(x, y, cb) {
   // multiplyNums multiplies two numbers and passes the result to the callback.
 }
+
+
+
+
+
+
+
 
 function contains(item, list, cb) {
   // contains checks if an item is present inside of the given array/list.
