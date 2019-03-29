@@ -62,7 +62,11 @@ sumNums(3, 5, (result) => { console.log('The result is:', result)});
 
 function multiplyNums(x, y, cb) {
   // multiplyNums multiplies two numbers and passes the result to the callback.
+  result = x * y;
+  return cb(result);
 }
+
+multiplyNums(3, 7, (result) => {console.log('The result is:', result)});
 
 
 
