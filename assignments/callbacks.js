@@ -71,14 +71,36 @@ multiplyNums(3, 7, (result) => {console.log('The result is:', result)});
 
 
 
-
-
-
-
 function contains(item, list, cb) {
   // contains checks if an item is present inside of the given array/list.
   // Pass true to the callback if it is, otherwise pass false.
+  result = list.find(element => element === item);
+
+  if (result === item) {
+    return cb(true);
+  } else {
+    return cb(false);
+  }
 }
+
+contains('Pencil', items, isFound => {
+  if (isFound === true) {
+    return console.log('Pencil is found!');
+  } else {
+    return console.log('Pencil is not found!');
+  }
+});
+
+contains('Backpack', items, isFound => {
+  if (isFound === true) {
+    return console.log('Backpack is found!');
+  } else {
+    return console.log('Backpack is not found!');
+  }
+});
+
+
+
 
 /* STRETCH PROBLEM */
 
