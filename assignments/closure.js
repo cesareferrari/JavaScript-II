@@ -1,6 +1,29 @@
 // ==== Challenge 1: Write your own closure ====
 // Write a simple closure of your own creation.  Keep it simple!
 
+function car(commute) {
+  let mileage = 0;
+  let commutes = 0;
+
+  return function() {
+    mileage = mileage + commute;
+    commutes++;
+
+    return `This car has traveled ${commutes} times and has a total mileage of ${mileage} miles`;
+  }
+}
+
+const car1 = car(30);
+
+console.log(car1());
+console.log(car1());
+console.log(car1());
+
+
+
+
+
+
 
 function counterCreator(startAt) {
   let counter = startAt;
