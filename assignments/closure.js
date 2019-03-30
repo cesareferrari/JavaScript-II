@@ -2,6 +2,29 @@
 // Write a simple closure of your own creation.  Keep it simple!
 
 
+function counterCreator(startAt) {
+  let counter = startAt;
+
+  return function() {
+    return counter++;
+  }
+}
+
+const counter1 = counterCreator(10);
+const counter2 = counterCreator(5);
+
+
+console.log('Counter 1 is now:', counter1());
+console.log('Counter 1 is now:', counter1());
+console.log('Counter 2 is now:', counter2());
+console.log('Counter 1 is now:', counter1());
+console.log('Counter 2 is now:', counter2());
+console.log('Counter 2 is now:', counter2());
+console.log('Counter 1 is now:', counter1());
+
+
+
+
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
 
