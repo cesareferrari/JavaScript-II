@@ -114,12 +114,57 @@ console.log(`The total donations amount to: $ ${totalDonations}`);
 
 
 
-
 // ==== Challenge 5: Be Creative ====
 // Now that you have used .forEach(), .map(), .filter(), and .reduce().  I want you to think of potential problems you could solve given the data set and the 5k fun run theme.  Try to create and then solve 3 unique problems using one or many of the array methods listed above.
 
 // Problem 1
+// There's a change of plans and we need to mass email all runners. Create an array with all email addresses.
+
+const emails = runners.map(runner => runner.email);
+console.log(emails);
+
+
 
 // Problem 2
+// Print out a nested array of runners sorted by donation in descending order
+// (largest donation first).
+// The array contains an array for each runner with name and donation value.
+
+
+// Sort runners by donation descending
+const runnersByDonation = runners.sort(function(a, b) {
+  return b.donation - a.donation;
+})
+
+const runnerNamesByDonation = runnersByDonation.map(function(runner) {
+  fullName = `${runner.first_name} ${runner.last_name}`;
+  return [fullName, runner.donation];
+})
+
+console.log(runnerNamesByDonation);
+
+
 
 // Problem 3
+
+// Build an array with only the company names sorted in alphabetical order and remove
+// all duplicates.
+
+const companyNames = [];
+
+runners.forEach(function(runner) {
+  found = companyNames.find(companyName => companyName === runner.company_name);
+
+  if (!found) {
+    companyNames.push(runner.company_name);
+  }
+});
+
+companyNames.sort()
+
+console.log(companyNames);
+
+
+
+
+
