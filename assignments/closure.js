@@ -25,6 +25,7 @@ console.log('Counter 1 is now:', counter1());
 
 
 
+
 /* STRETCH PROBLEMS, Do not attempt until you have completed all previous tasks for today's project files */
 
 
